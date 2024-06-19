@@ -200,7 +200,7 @@
                                             <outlet property="fromLocatioLabel" destination="eQ1-kc-ZTL" id="Tng-Gn-2hr"/>
                                             <outlet property="orderLabel" destination="68B-Xh-qy8" id="OhQ-4t-gMw"/>
                                             <outlet property="priceLabel" destination="frf-jo-cQ9" id="kUj-SQ-pV3"/>
-                                            <outlet property="statusLabel" destination="syr-FG-Gm1" id="eqM-Nw-eCo"/>
+                                            <outlet property="statusLabel" destination="syr-FG-Gm1" id="lUI-53-f6d"/>
                                             <outlet property="toCityLabel" destination="zvC-TL-aaW" id="OwW-ac-le7"/>
                                             <outlet property="toLocationLabel" destination="cjK-hN-k0u" id="NRj-FA-wbv"/>
                                         </connections>
