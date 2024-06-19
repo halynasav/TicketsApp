@@ -21,6 +21,9 @@ class MyTicketListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        setupNavigationBar()
+
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +42,13 @@ class MyTicketListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func setupNavigationBar() {
+        UINavigationBar.appearance().barTintColor = .systemBlue
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, 
+                                                            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
+  
+    }
 
     private func setupTableView() {
         savedTicketsTableView.delegate = self

@@ -34,7 +34,7 @@ class TicketTableViewCell: UITableViewCell {
     }
     
     func config() {
-        statusLabel.layer.cornerRadius = 16
+        statusLabel.layer.cornerRadius = 25
         
     }
 
