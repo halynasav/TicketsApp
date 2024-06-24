@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b10-ga-S4R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b10-ga-S4R">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-802" y="4"/>
         </scene>
-        <!--My Ticket List View Controller-->
+        <!--My tickets-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MyTicketListViewController" customModule="PlaneApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,10 +146,12 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="appHeaderColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="s7c-Ck-gm5">
-                        <barButtonItem key="rightBarButtonItem" title="Plus" image="plus.circle" catalog="system" id="53m-qK-ayy">
+                    <navigationItem key="navigationItem" title="My tickets" id="s7c-Ck-gm5">
+                        <barButtonItem key="rightBarButtonItem" title="Plus" id="53m-qK-ayy">
+                            <imageReference key="image" image="plus.circle" catalog="system" variableValue="1"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="sWO-cX-JDP" kind="show" id="EnG-86-hyU"/>
                             </connections>
@@ -161,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="-34.351145038167935" y="3.5211267605633805"/>
         </scene>
-        <!--Add Ticket View Controller-->
+        <!--Add Ticket-->
         <scene sceneID="Zu8-CO-lzK">
             <objects>
                 <viewController id="sWO-cX-JDP" customClass="AddTicketViewController" customModule="PlaneApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -311,7 +315,7 @@
                             <constraint firstItem="28i-4S-NfL" firstAttribute="leading" secondItem="xVA-kI-mov" secondAttribute="leading" id="tUb-8q-Gy7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gMu-26-Bby"/>
+                    <navigationItem key="navigationItem" title="Add Ticket" style="editor" id="gMu-26-Bby"/>
                     <connections>
                         <outlet property="fromAirportLabel" destination="xVA-kI-mov" id="HQs-gt-0Uv"/>
                         <outlet property="fromAirportTextField" destination="ICr-gO-LrB" id="N1B-hr-Mgp"/>
@@ -336,6 +340,9 @@
         <image name="Arrows" width="39" height="11"/>
         <image name="Icon wrapper" width="24" height="24"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="appHeaderColor">
+            <color red="0.10196078431372549" green="0.58039215686274503" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

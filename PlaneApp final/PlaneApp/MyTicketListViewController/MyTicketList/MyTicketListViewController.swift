@@ -21,6 +21,7 @@ class MyTicketListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        configNavigation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +29,7 @@ class MyTicketListViewController: UIViewController {
         
         tickets = manager.getMyTicktes()
         savedTicketsTableView.reloadData()
+
     }
 
     /*
@@ -39,6 +41,14 @@ class MyTicketListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func configNavigation() {
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                          NSAttributedString.Key.font: UIFont(name: "Verdana", size: 18)]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+        
+ 
+    }
 
     private func setupTableView() {
         savedTicketsTableView.delegate = self
