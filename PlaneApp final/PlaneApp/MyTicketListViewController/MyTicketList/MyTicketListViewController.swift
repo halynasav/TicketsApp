@@ -22,8 +22,6 @@ class MyTicketListViewController: UIViewController {
 
         setupTableView()
         setupNavigationBar()
-
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {
