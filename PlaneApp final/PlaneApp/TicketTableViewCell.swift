@@ -23,13 +23,21 @@ class TicketTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        config()
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func config () {
+        statusLabel.layer.cornerRadius = 16
+        statusLabel.clipsToBounds = true
+        detailsView.layer.cornerRadius = 16
+        
     }
 
 }

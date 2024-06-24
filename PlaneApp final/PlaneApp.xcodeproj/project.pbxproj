@@ -25,6 +25,7 @@
 		525C7C302C20AF3700940E3B /* Ticket+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C7C2D2C20AF3700940E3B /* Ticket+CoreDataClass.swift */; };
 		525C7C342C20AF6300940E3B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C7C332C20AF6300940E3B /* DBManager.swift */; };
 		525C7C372C20AFB000940E3B /* TicketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C7C362C20AFB000940E3B /* TicketProtocol.swift */; };
+		FE577B072C21F58C00515C07 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE577B062C21F58C00515C07 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		525C7C2D2C20AF3700940E3B /* Ticket+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ticket+CoreDataClass.swift"; sourceTree = "<group>"; };
 		525C7C332C20AF6300940E3B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		525C7C362C20AFB000940E3B /* TicketProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketProtocol.swift; sourceTree = "<group>"; };
+		FE577B062C21F58C00515C07 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				0828827C2C0E23FA00A40C2F /* LaunchScreen.storyboard */,
 				0828827F2C0E23FA00A40C2F /* Info.plist */,
 				082882772C0E23F700A40C2F /* PlaneApp.xcdatamodeld */,
+				FE577B062C21F58C00515C07 /* Color.xcassets */,
 			);
 			path = PlaneApp;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0828827B2C0E23FA00A40C2F /* Assets.xcassets in Resources */,
+				FE577B072C21F58C00515C07 /* Color.xcassets in Resources */,
 				0828827E2C0E23FA00A40C2F /* Base in Resources */,
 				082882762C0E23F600A40C2F /* Base in Resources */,
 			);
