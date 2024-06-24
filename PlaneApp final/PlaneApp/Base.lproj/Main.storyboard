@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b10-ga-S4R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b10-ga-S4R">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,14 +18,33 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U9k-AG-I47"/>
+                        <segue destination="V1B-Sg-NJZ" kind="relationship" relationship="rootViewController" id="rcm-1w-uMS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4F-fa-7Ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-802" y="4"/>
         </scene>
-        <!--My Ticket List View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="HdP-oj-5Uv">
+            <objects>
+                <tabBarController id="V1B-Sg-NJZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IZB-XC-E9l"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ny4-pH-8HS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Vr3-6h-G36"/>
+                        <segue destination="sWO-cX-JDP" kind="relationship" relationship="viewControllers" id="cKn-BZ-oYN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LA3-gF-B87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802" y="906"/>
+        </scene>
+        <!--My tickets-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MyTicketListViewController" customModule="PlaneApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My tickets" image="checkmark.rectangle" catalog="system" id="FFv-RF-lLU"/>
                     <navigationItem key="navigationItem" id="s7c-Ck-gm5">
                         <barButtonItem key="rightBarButtonItem" title="Plus" image="plus.circle" catalog="system" id="53m-qK-ayy">
                             <connections>
@@ -153,6 +173,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="savedTicketsTableView" destination="6Wg-s7-P5w" id="W5m-Az-w6S"/>
                     </connections>
@@ -161,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="-34.351145038167935" y="3.5211267605633805"/>
         </scene>
-        <!--Add Ticket View Controller-->
+        <!--Search-->
         <scene sceneID="Zu8-CO-lzK">
             <objects>
                 <viewController id="sWO-cX-JDP" customClass="AddTicketViewController" customModule="PlaneApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -269,7 +290,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5K-D4-hnj">
-                                <rect key="frame" x="20" y="783" width="353" height="35"/>
+                                <rect key="frame" x="20" y="734" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
@@ -311,7 +332,9 @@
                             <constraint firstItem="28i-4S-NfL" firstAttribute="leading" secondItem="xVA-kI-mov" secondAttribute="leading" id="tUb-8q-Gy7"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="z8O-9N-Gdd"/>
                     <navigationItem key="navigationItem" id="gMu-26-Bby"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fromAirportLabel" destination="xVA-kI-mov" id="HQs-gt-0Uv"/>
                         <outlet property="fromAirportTextField" destination="ICr-gO-LrB" id="N1B-hr-Mgp"/>
@@ -329,12 +352,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiN-E1-FUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.48854961832058" y="1.4084507042253522"/>
+            <point key="canvasLocation" x="-34" y="906"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EnG-86-hyU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Arrows" width="39" height="11"/>
         <image name="Icon wrapper" width="24" height="24"/>
+        <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
